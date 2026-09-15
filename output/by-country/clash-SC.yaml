@@ -6,77 +6,28 @@ log-level: info
 proxies:
 - name: 🇸🇨 SC 01 - xiaohe
   type: vless
-  server: 104.18.42.54
-  port: 2083
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  server: 188.114.97.6
+  port: 2095
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: newwk1.f1w.de5.net
   network: ws
   ws-opts:
-    path: /
+    path: /?ed=2560
     headers:
-      Host: newwk1.f1w.de5.net
-- name: 🇸🇨 SC 02 - xiaohe
-  type: vless
-  server: 104.21.238.93
-  port: 443
-  uuid: 50414e45-4c5f-5a45-5553-44890b90d17e
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: afzoybehu2ws.vtzv4xe1un6s.workers.dev
-  network: ws
-  ws-opts:
-    path: /stream/PANEL_ZEUS/44890b90d17e/loc-0
-    headers:
-      Host: afzoybehu2ws.vtzv4xe1un6s.workers.dev
-- name: 🇸🇨 SC 03 - xiaohe
-  type: vless
-  server: 172.67.223.101
-  port: 2087
-  uuid: 5a0028f9-c656-cec9-4b61-54678477a408
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: green-credit-7e7b.vpnfreev2rayconfig-sale1.workers.dev
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: green-credit-7e7b.vpnfreev2rayconfig-sale1.workers.dev
-- name: 🇸🇨 SC 04 - xiaohe
-  type: vless
-  server: 104.21.78.225
-  port: 443
-  uuid: 4ce7cb8a-f9b1-4bfa-a80d-9e168c61a633
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: curly-night-6928.ggdhchjk.workers.dev
-  network: ws
-  ws-opts:
-    path: /sync
-    headers:
-      Host: curly-night-6928.ggdhchjk.workers.dev
+      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇸🇨 SC 01 - xiaohe
-  - 🇸🇨 SC 02 - xiaohe
-  - 🇸🇨 SC 03 - xiaohe
-  - 🇸🇨 SC 04 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - 🇸🇨 SC 01 - xiaohe
-  - 🇸🇨 SC 02 - xiaohe
-  - 🇸🇨 SC 03 - xiaohe
-  - 🇸🇨 SC 04 - xiaohe
 rules:
 - MATCH,PROXIES
