@@ -4,31 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇭 CH 01 - xiaohe
+- name: 🇧🇪 BE 01 - xiaohe
   type: vless
-  server: 104.18.28.234
-  port: 443
-  uuid: f6b5a6a3-f3e1-63ca-bb68-bdc400000000
+  server: 185.125.100.76
+  port: 8443
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: netlivpn5505.ffffdsaaa.workers.dev
+  servername: cdn8848.776676.xyz
   network: ws
   ws-opts:
-    path: /
+    path: /trade/game/movies
     headers:
-      Host: netlivpn5505.ffffdsaaa.workers.dev
+      Host: cdn8848.776676.xyz
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇭 CH 01 - xiaohe
+  - 🇧🇪 BE 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇭 CH 01 - xiaohe
+  - 🇧🇪 BE 01 - xiaohe
 rules:
 - MATCH,PROXIES
