@@ -21,7 +21,7 @@ proxies:
   type: vless
   server: 31.58.181.88
   port: 8443
-  uuid: ce55737c-243b-497f-9d9a-38700f327894
+  uuid: 4e32f662-01da-4dad-bf33-ee17f578d118
   udp: true
   tls: true
   skip-cert-verify: true
@@ -33,7 +33,7 @@ proxies:
   type: vless
   server: 31.58.181.88
   port: 8443
-  uuid: 1423f399-74d3-4d99-90b9-bc7cae1af706
+  uuid: 32088840-4c1e-44af-958f-b7b552aeb919
   udp: true
   tls: true
   skip-cert-verify: true
@@ -45,7 +45,7 @@ proxies:
   type: vless
   server: 31.58.181.88
   port: 8443
-  uuid: e16ab346-73be-4fc6-8b6f-511c455b8504
+  uuid: 863ce48d-6b5e-4682-b5d7-0c9b43895841
   udp: true
   tls: true
   skip-cert-verify: true
@@ -55,17 +55,17 @@ proxies:
   client-fingerprint: firefox
 - name: 🇦🇪 阿联酋 (UAE) 05 - xiaohe
   type: vless
-  server: uae.unixzone.us
-  port: 22573
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  server: cdn.snobvpn.online
+  port: 80
+  uuid: 246b101b-4e4a-451f-8e9c-5e8d3b64b4ef
   udp: true
   tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /
+    path: /snob-ws
     headers:
-      Host: uae.unixzone.us
+      Host: cdn.snobvpn.online
 - name: 🇦🇪 阿联酋 (UAE) 06 - xiaohe
   type: vless
   server: uae.unixzone.us
@@ -81,9 +81,22 @@ proxies:
       Host: uae.unixzone.us
 - name: 🇦🇪 阿联酋 (UAE) 07 - xiaohe
   type: vless
+  server: 84.235.244.108
+  port: 22573
+  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: uae.unixzone.us
+- name: 🇦🇪 阿联酋 (UAE) 08 - xiaohe
+  type: vless
   server: 31.58.181.88
   port: 8443
-  uuid: 32088840-4c1e-44af-958f-b7b552aeb919
+  uuid: 1e3b5752-e720-4347-b8e9-384697d0ce38
   udp: true
   tls: true
   skip-cert-verify: true
@@ -91,19 +104,32 @@ proxies:
     public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
   servername: tradingview.com
   client-fingerprint: firefox
-- name: 🇦🇪 阿联酋 (UAE) 08 - xiaohe
+- name: 🇦🇪 阿联酋 (UAE) 09 - xiaohe
   type: vless
-  server: 89.125.147.199
-  port: 443
-  uuid: 246b101b-4e4a-451f-8e9c-5e8d3b64b4ef
+  server: uae.unixzone.us
+  port: 22573
+  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: uae.unixzone.us
+- name: 🇦🇪 阿联酋 (UAE) 10 - xiaohe
+  type: vless
+  server: 31.58.181.88
+  port: 8443
+  uuid: febfeec2-9a21-4afc-9edb-0833466672cd
   udp: true
   tls: true
   skip-cert-verify: true
   reality-opts:
-    public-key: iQJ8UdFw-lUWa9mXugescYHkmwNH96nuj_z-LAZvfxg
-  servername: maps.apple.com
-  client-fingerprint: firefox
-- name: 🇦🇪 阿联酋 (UAE) 09 - xiaohe
+    public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
+  servername: tradingview.com
+  client-fingerprint: chrome
+- name: 🇦🇪 阿联酋 (UAE) 11 - xiaohe
   type: vless
   server: 84.235.244.108
   port: 22573
@@ -116,6 +142,32 @@ proxies:
     path: /
     headers:
       Host: uae.unixzone.us
+- name: 🇦🇪 阿联酋 (UAE) 12 - xiaohe
+  type: vless
+  server: 84.235.244.108
+  port: 22573
+  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: uae.unixzone.us
+- name: 🇦🇪 阿联酋 (UAE) 13 - xiaohe
+  type: vless
+  server: cdn.snobvpn.online
+  port: 80
+  uuid: 246b101b-4e4a-451f-8e9c-5e8d3b64b4ef
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /snob-ws
+    headers:
+      Host: cdn.snobvpn.online
 proxy-groups:
 - name: PROXIES
   type: select
@@ -130,6 +182,10 @@ proxy-groups:
   - 🇦🇪 阿联酋 (UAE) 07 - xiaohe
   - 🇦🇪 阿联酋 (UAE) 08 - xiaohe
   - 🇦🇪 阿联酋 (UAE) 09 - xiaohe
+  - 🇦🇪 阿联酋 (UAE) 10 - xiaohe
+  - 🇦🇪 阿联酋 (UAE) 11 - xiaohe
+  - 🇦🇪 阿联酋 (UAE) 12 - xiaohe
+  - 🇦🇪 阿联酋 (UAE) 13 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -144,5 +200,9 @@ proxy-groups:
   - 🇦🇪 阿联酋 (UAE) 07 - xiaohe
   - 🇦🇪 阿联酋 (UAE) 08 - xiaohe
   - 🇦🇪 阿联酋 (UAE) 09 - xiaohe
+  - 🇦🇪 阿联酋 (UAE) 10 - xiaohe
+  - 🇦🇪 阿联酋 (UAE) 11 - xiaohe
+  - 🇦🇪 阿联酋 (UAE) 12 - xiaohe
+  - 🇦🇪 阿联酋 (UAE) 13 - xiaohe
 rules:
 - MATCH,PROXIES
