@@ -18,32 +18,32 @@ proxies:
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
     headers:
       Host: 60.248.219.78
-- name: 🇰🇷 韩国 (South Korea) 02 (家宽) - xiaohe
+- name: 🇺🇸 美国 (United States) 02 (家宽) - xiaohe
   type: vless
-  server: 104.17.64.70
-  port: 8880
-  uuid: f6e14309-5cff-4f5d-bce1-06a260159bbe
+  server: 162.159.24.131
+  port: 2095
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
   tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /
+    path: /?ed=2560security=tls
     headers:
-      Host: steep-bread-32f0.92-d12.workers.dev
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
-  - 🇰🇷 韩国 (South Korea) 02 (家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 02 (家宽) - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
-  - 🇰🇷 韩国 (South Korea) 02 (家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 02 (家宽) - xiaohe
 rules:
 - MATCH,PROXIES
