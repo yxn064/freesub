@@ -4,31 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇦 UA 01 - xiaohe
+- name: 🇮🇷 IR 01 - xiaohe
   type: vless
-  server: s3-ge.videocdnpink.video
+  server: 85.133.244.214
   port: 443
-  uuid: b3a7fe26-2ea7-4aa1-ba7a-8ef37a1a71c5
+  uuid: fb5c43f4-bd23-453d-a3cf-45ad5b9c020b
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: s3-ge.videocdnpink.video
   network: ws
   ws-opts:
-    path: /api/53d53ac3/a7fa61/096357bebc62
+    path: /
     headers:
-      Host: s3-ge.videocdnpink.video
+      Host: 85.133.244.214
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇺🇦 UA 01 - xiaohe
+  - 🇮🇷 IR 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇺🇦 UA 01 - xiaohe
+  - 🇮🇷 IR 01 - xiaohe
 rules:
 - MATCH,PROXIES
